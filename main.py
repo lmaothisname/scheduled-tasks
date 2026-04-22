@@ -20,8 +20,8 @@ if (today in birthdays_dict):
 # 4. Send the letter generated in step 3 to that person's email address.
   with smtplib.SMTP("smtp.gmail.com") as connection:
     connection.starttls()
-    connection.login(user=my_email,password=password)
-    connection.sendmail(from_addr=my_email,to_addrs=birthday_person["email"],msg=f"Subject:Happy birthday!\n\n{data}")
+    connection.login(user=MY_EMAIL,password=MY_PASSWORD)
+    connection.sendmail(from_addr=MY_EMAIL,to_addrs=birthday_person["email"],msg=f"Subject:Happy birthday!\n\n{data}")
 
 
 
